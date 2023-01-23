@@ -28,7 +28,7 @@ function removeOneCharacter (index){
 
 async function makeDeleteCall(index){
   try {
-     const id = characters.indexOf(index).id;
+     var id = characters[index].id;
      const response = await axios.delete('http://localhost:5000/users/' + id);
       return response;
     }
