@@ -23,7 +23,8 @@ function removeOneCharacter (index){
 function updateList(person) { 
   makePostCall(person).then(result => {
   if (result && result.status === 201)
-     setCharacters([...characters, person] );
+     person = result.data;
+     setCharacters([...characters, person]);
   });
 }
 
